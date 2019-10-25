@@ -9,12 +9,22 @@
 <body>
 <p>Welcome to our choose your adventure game!</p>
 <script>
-var person = {
+var character = {
     firstName: "Richard",
     lastName: "Bell",
     fullName : function() {
         return this.firstName + " " + this.lastName;
     }
+
+}    
+</script>
+<script>
+var character = {
+    firstName: "Kailum",
+    lastName: "Ahmed",
+    fullName : function() {
+        return this.firstName + " " + this.lastName;
+    }            
 }    
 </script>
 <button onclick="myButton()">Richard Bell</button> 
@@ -24,7 +34,8 @@ var person = {
 function myButton(){
     var button = document.createElement("Button")
     button.innerHTML = "Richard Bell is a independent dog owner";
-    
+    button.innerHTML = "Richard Bell is a independent dog owner";
+    button.innerHTML = "Richard Bell is a independent dog owner";
 }
 </script>
 </body>
