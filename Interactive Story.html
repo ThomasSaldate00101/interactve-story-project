@@ -9,11 +9,35 @@
 <body>
 <p>Welcome to our choose your adventure game!</p>
 
+<script>
+let characterOne = {
+    firstName: "Richard",
+    lastName: "Bell",
+    fullName : function() {
+        return this.firstName + " " + this.lastName;
+    }
+}    
+let characterTwo = {
+    firstName: "Kailum",
+    lastName: "Ahmed",
+    fullName : function() {
+        return this.firstName + " " + this.lastName;
+    } 
+}           
+let characterThree ={
+    firstName: "Maddy",
+    lastName: "Kidd",
+    fullName: function(){
+        return this.firstName + " " + this.lastName;
+    }
+}     
+</script>
+
 <button onclick="myButton()">Richard Bell</button> 
 <button onclick="myButton()">Kailum Ahmed</button> 
 <button onclick="myButton()">Maddy Kidd</button> 
 <script>
-function myButton(character1){
+function myButton(){
     let button = document.createElement("Button")
    button.innerHTML = "Richard Bell is a independent dog owner";
    document.body.appendChild(button);
