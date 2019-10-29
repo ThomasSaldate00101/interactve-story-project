@@ -8,6 +8,9 @@
 </head>
 <body>
 <p>Welcome to our choose your adventure game!</p>
+    const myStory = {
+        
+    }
 <script>
 var character = {
     firstName: "Richard",
@@ -19,12 +22,16 @@ var character = {
 }    
 </script>
 <script>
-var character = {
+var character2 = {
     firstName: "Kailum",
     lastName: "Ahmed",
     fullName : function() {
         return this.firstName + " " + this.lastName;
     }            
+var character3 ={
+    firstName: "Maddy"
+    lastName: "Kidd"
+}     
 }    
 </script>
 <button onclick="myButton()">Richard Bell</button> 
@@ -33,9 +40,9 @@ var character = {
 <script>
 function myButton(character1, character2, character3){
     var button = document.createElement("Button")
-    character1 = "Richard Bell is a independent dog owner";
-    character2= "Kailum Ahmed is an engineer who lives alone";
-    character3= "Maddy Kidd was born after the nukes went off";
+    print [character1] = "Richard Bell is a independent dog owner";
+    print [character2] = "Kailum Ahmed is an engineer who lives alone";
+    print [character3]= "Maddy Kidd was born after the nukes went off";
     
 }
 </script>
