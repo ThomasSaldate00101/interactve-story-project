@@ -8,11 +8,24 @@
 </head>
 <body>
 <p>Welcome to our choose your adventure game!</p>
+
+<div id="storyPartOne"> 
+<h2>let our stupid journey begin...</h2>
+
+</div>
+
+<div id=Button>
+
+
+</div>
+
+</div>
 <script>
 let storyFolder = document.getElementById("story")
 
-let buttonBag = document.getElementById("")
-const myStory = {
+let buttonBag = document.getElementById("Button")
+
+const theStory = {
     intro : {
         text : "It is a lovely afternoon, everyones getting off of work, kids are going back into the houses after playing. People are ready to relax after hard work, when suddenly an alarm sounds. Everyone is in panic, running out of their house, leaving everthing behind"
     
@@ -24,27 +37,7 @@ function showStory(text){
     storyText.innerText = text;
     document.body.appendChild(storyText);
 }
-let characterOne = {
-    firstName: "Richard",
-    lastName: "Bell",
-    fullName : function() {
-        return this.firstName + " " + this.lastName;
-    }
-}    
-let characterTwo = {
-    firstName: "Kailum",
-    lastName: "Ahmed",
-    fullName : function() {
-        return this.firstName + " " + this.lastName;
-    } 
-}           
-let characterThree ={
-    firstName: "Maddy",
-    lastName: "Kidd",
-    fullName: function(){
-        return this.firstName + " " + this.lastName;
-    }
-}     
+    
 </script>
 <button onclick="myButtonOne()">Richard Bell</button> 
 <button onclick="myButtonTwo()">Kailum Ahmed</button> 
