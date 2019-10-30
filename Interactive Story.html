@@ -9,38 +9,47 @@
 <body>
 <p>Welcome to our choose your adventure game!</p>
 <script>
-var character = {
+let characterOne = {
     firstName: "Richard",
     lastName: "Bell",
     fullName : function() {
         return this.firstName + " " + this.lastName;
     }
-
 }    
-</script>
-<script>
-var character2 = {
+let characterTwo = {
     firstName: "Kailum",
     lastName: "Ahmed",
     fullName : function() {
         return this.firstName + " " + this.lastName;
-    }            
-var character3 ={
-    firstName: "Maddy"
-    lastName: "Kidd"
+    } 
+}           
+let characterThree ={
+    firstName: "Maddy",
+    lastName: "Kidd",
+    fullName: function(){
+        return this.firstName + " " + this.lastName;
+    }
 }     
-}    
 </script>
-<button onclick="myButton()">Richard Bell?</button> 
-<button onclick="myButton()">Kailum Ahmed?</button> 
-<button onclick="myButton()">Maddy Kidd?</button> 
+<button onclick="myButtonOne()">Richard Bell?</button> 
+<button onclick="myButtonTwo()">Kailum Ahmed?</button> 
+<button onclick="myButtonThree()">Maddy Kidd?</button> 
 <script>
-function myButton(character1, character2, character3){
-    var button = document.createElement("Button")
-    print [character1] = "Richard Bell is a independent dog owner";
-    print [character2] = "Kailum Ahmed is an engineer who lives alone";
-    print [character3]= "Maddy Kidd was born after the nukes went off";
-    
+function myButtonOne(characterOne){
+    let button = document.createElement("Button")
+   button.innerHTML = "Richard Bell is a independent dog owner";
+   document.body.appendChild(button);
+}
+
+function myButtonTwo(characterTwo){
+    let button = document.createElement("Button")
+   button.innerHTML = "Kailum Ahmed is an engineer who lives alone";
+   document.body.appendChild(button);
+}
+function myButtonThree(characterThree){
+    let button = document.createElement("Button")
+   button.innerHTML = "Maddy Kidd is a survivor of the wasteland";
+   document.body.appendChild(button);
 }
 </script>
 </body>
