@@ -9,6 +9,18 @@
 <body>
 <p>Welcome to our choose your adventure game!</p>
 <script>
+const myStory = {
+    intro : {
+        text : "It is a lovely afternoon, everyones getting off of work, kids are going back into the houses after playing. People are ready to relax after hard work, when suddenly an alarm sounds. Everyone is in panic, running out of their house, leaving everthing behind"
+    
+    }
+
+}
+function showStory(text){
+    let storyText = document.createElement('p');
+    storyText.innerText = text;
+    document.body.appendChild(storyText);
+}
 let characterOne = {
     firstName: "Richard",
     lastName: "Bell",
@@ -31,9 +43,9 @@ let characterThree ={
     }
 }     
 </script>
-<button onclick="myButtonOne()">Richard Bell?</button> 
-<button onclick="myButtonTwo()">Kailum Ahmed?</button> 
-<button onclick="myButtonThree()">Maddy Kidd?</button> 
+<button onclick="myButtonOne()">Richard Bell</button> 
+<button onclick="myButtonTwo()">Kailum Ahmed</button> 
+<button onclick="myButtonThree()">Maddy Kidd</button> 
 <script>
 function myButtonOne(characterOne){
     let button = document.createElement("Button")
