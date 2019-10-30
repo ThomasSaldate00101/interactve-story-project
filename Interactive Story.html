@@ -11,7 +11,10 @@
 <script>
 const myStory = {
     intro : {
-        text : "It is a lovely afternoon, everyones getting off of work, kids are going back into the houses after playing. People are ready to relax after hard work, when suddenly an alarm sounds. Everyone is in panic, running out of their house, leaving everthing behind"
+        text : "It is a lovely afternoon, everyones getting off of work, kids are going back into the houses after playing. People are ready to relax after hard work, when suddenly an alarm sounds. Everyone is in panic, running out of their house, leaving everthing behind",
+        choices :[
+
+        ]
     }
 }
 function showStory(text){
@@ -19,44 +22,24 @@ function showStory(text){
     storyText.innerText = text;
     document.body.appendChild(storyText);
 }
-let characterOne = {
-    firstName: "Richard",
-    lastName: "Bell",
-    fullName : function() {
-        return this.firstName + " " + this.lastName;
-    }
-}    
-let characterTwo = {
-    firstName: "Kailum",
-    lastName: "Ahmed",
-    fullName : function() {
-        return this.firstName + " " + this.lastName;
-    } 
-}           
-let characterThree ={
-    firstName: "Maddy",
-    lastName: "Kidd",
-    fullName: function(){
-        return this.firstName + " " + this.lastName;
-    }
-}     
+    
 </script>
 <button onclick="myButtonOne()">Richard Bell</button> 
 <button onclick="myButtonTwo()">Kailum Ahmed</button> 
 <button onclick="myButtonThree()">Maddy Kidd</button> 
 <script>
-function myButtonOne(characterOne){
+function myButtonOne(){
     let button = document.createElement("Button")
    button.innerHTML = "Richard Bell is a independent dog owner";
    document.body.appendChild(button);
 }
 
-function myButtonTwo(characterTwo){
+function myButtonTwo(){
     let button = document.createElement("Button")
    button.innerHTML = "Kailum Ahmed is an engineer who lives alone";
    document.body.appendChild(button);
 }
-function myButtonThree(characterThree){
+function myButtonThree(){
     let button = document.createElement("Button")
    button.innerHTML = "Maddy Kidd is a survivor of the wasteland";
    document.body.appendChild(button);
