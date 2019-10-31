@@ -22,9 +22,11 @@
 
 </div>
 <script>
-let storyFolder = document.getElementById("story")
+let storyFolder = document.getElementById("story");
 
-let buttonBag = document.getElementById("Button")
+let buttonBag = document.getElementById("Button");
+
+let storyHistory = ["intro"]; 
 
 const theStory = {
     intro : {
@@ -50,28 +52,27 @@ function showStory(text){
 }
 </script>
 
-<script>
 
-<button onclick="myButtonOne()">Richard Bell</button> 
-<button onclick="myButtonTwo()">Kailum Ahmed</button> 
-<button onclick="myButtonThree()">Maddy Kidd</button> 
-</script>
 <script>
+<button onclick="myButtonOne()">Richard Bell</button>; 
+<button onclick="myButtonTwo()">Kailum Ahmed</button>; 
+<button onclick="myButtonThree()">Maddy Kidd</button>; 
+
 function myButtonOne(){
     let button = document.createElement("Button")
    button.innerHTML = "Richard Bell is a independent dog owner";
-   document.body.appendChild(button);
+   buttonBag.appendChild(button);
 }
 
 function myButtonTwo(){
     let button = document.createElement("Button")
    button.innerHTML = "Kailum Ahmed is an engineer who lives alone";
-   document.body.appendChild(button);
+   buttonBag.appendChild(button);
 }
 function myButtonThree(){
     let button = document.createElement("Button")
    button.innerHTML = "Maddy Kidd is a survivor of the wasteland";
-   document.body.appendChild(button);
+   buttonBag.appendChild(button);
 }
 </script>
 </body>
