@@ -38,8 +38,11 @@ const theStory = {
    },
 }
     R1 : {
-        text : ""
-        []
+        text : ["On a bright Saturday evening in the 1980’s, you are walking your dog named danny, your childhood dog that has been at your side through thick and thin, who would risk his life if it meant . On your way back from your joyous adventure, sirens ring like that one annoying kid in 8th grade. “Nuclear attack imminent please seek shelter immediately!” in a panic about what to do, you "]
+        option : [
+            ["run to the bunker", "R2"]
+            ["make your way home", "just like that one movie..."]
+            ]
 }
 </script>
 <script>
@@ -52,11 +55,10 @@ function showStory(text){
 
 <script>
 
-<button onclick="myButtonOne()">Richard Bell</button> 
-<button onclick="myButtonTwo()">Kailum Ahmed</button> 
-<button onclick="myButtonThree()">Maddy Kidd</button> 
-</script>
-<script>
+<button onclick="myButtonOne()">Richard Bell</button> ;
+<button onclick="myButtonTwo()">Kailum Ahmed</button> ;
+<button onclick="myButtonThree()">Maddy Kidd</button> ;
+
 function myButtonOne(){
     let button = document.createElement("Button")
    button.innerHTML = "Richard Bell is a independent dog owner";
