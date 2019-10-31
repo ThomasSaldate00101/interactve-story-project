@@ -34,22 +34,28 @@ const theStory = {
              ["Kailum Ahmed", "meme kailum"]
              ["Maddy Kidd", "Maddy kid's Story"]
         ]
-    }
 
-},
+   },
+}
     R1 : {
         text : ""
-    }
+        []
+}
+</script>
+<script>
 function showStory(text){
     let storyText = document.createElement('p');
     storyText.innerText = text;
     document.body.appendChild(storyText);
 }
-    
 </script>
+
+<script>
+
 <button onclick="myButtonOne()">Richard Bell</button> 
 <button onclick="myButtonTwo()">Kailum Ahmed</button> 
 <button onclick="myButtonThree()">Maddy Kidd</button> 
+</script>
 <script>
 function myButtonOne(){
     let button = document.createElement("Button")
