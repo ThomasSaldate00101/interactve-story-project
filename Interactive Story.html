@@ -40,8 +40,11 @@ const theStory = {
    },
 }
     R1 : {
-        text : ""
-        []
+        text : ["On a bright Saturday evening in the 1980’s, you are walking your dog named danny, your childhood dog that has been at your side through thick and thin, who would risk his life if it meant . On your way back from your joyous adventure, sirens ring like that one annoying kid in 8th grade. “Nuclear attack imminent please seek shelter immediately!” in a panic about what to do, you "]
+        choices : [
+            ["run to the bunker", "R2"],
+            ["make your way home", "just like that one movie..."]
+            ]
 }
 function createButton(buttonText, choice){
     let button = document.createElement("Button");
@@ -58,6 +61,18 @@ function createStory(text){
     storyFolder.appendChild(storyItem);
 } 
 
+<<<<<<< HEAD
+=======
+<button onclick="myButtonOne()">Richard Bell</button> ;
+<button onclick="myButtonTwo()">Kailum Ahmed</button> ;
+<button onclick="myButtonThree()">Maddy Kidd</button> ;
+
+function myButtonOne(){
+    let button = document.createElement("Button")
+   button.innerHTML = "Richard Bell is a independent dog owner";
+   document.body.appendChild(button);
+}
+>>>>>>> b5fbb9d710ea951dfbf835d688a987b2b8156c7f
 
 function showStory(){
     let currentPage = storyHistory[history.length - 1];
