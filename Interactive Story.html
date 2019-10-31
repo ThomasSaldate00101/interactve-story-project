@@ -10,7 +10,7 @@
 <p>Welcome to our choose your adventure game!</p>
 
 <div id="storyPartOne"> 
-<h2>let our stupid journey begin...</h2>
+<h2>let our special journey begin...</h2>
 
 <p>It is a lovely afternoon, everyones getting off of work, kids are going back into the houses after playing. People are ready to relax after hard work, when suddenly an alarm sounds. Everyone is in panic, running out of their house, leaving everthing behind</p>
 </div>
@@ -43,37 +43,57 @@ const theStory = {
         text : ""
         []
 }
+function createButton(buttonText, choice){
+    let button = document.createElement("Button");
+    button.innerHTML = buttonText;
+    button.addEventListener("click", function(){
+        storyHistory.push(choice);
+        showStory();
+    });
+}
+
+function createStory(text){
+    let storyItem = document.createElement ("p");
+    storyItem.innerText = text;
+    storyFolder.appendChild(storyItem);
+} 
+
+
+function showStory(){
+    let currentPage = storyHistory[history.length - 1];
+    storyFolder.innerHTML = "";
+    buttonBag.innerHTML = "";
+    for(let page of storyHistory){
+        createStory(story[page].text);
+    }
+    for(let choice of story[currentPage].choices){
+        createButton(choice[0], choice[1])
+    }
+}
 </script>
 <script>
-function showStory(text){
-    let storyText = document.createElement('p');
-    storyText.innerText = text;
-    document.body.appendChild(storyText);
-}
-</script>
+    <button onclick="myButtonOne()">Richard Bell</button>; 
+    <button onclick="myButtonTwo()">Kailum Ahmed</button>; 
+    <button onclick="myButtonThree()">Maddy Kidd</button>; 
+    </script>
+    <script>
+    function myButtonOne(){
+        let button = document.createElement("Button")
+       button.innerHTML = "Richard Bell is a independent dog owner";
+       document.body.appendChild(button);
+    }
+    
+    function myButtonTwo(){
+        let button = document.createElement("Button")
+       button.innerHTML = "Kailum Ahmed is an engineer who lives alone";
+       document.body.appendChild(button);
+    }
+    function myButtonThree(){
+        let button = document.createElement("Button")
+       button.innerHTML = "Maddy Kidd is a survivor of the wasteland";
+       document.body.appendChild(button);
+    }
+    </script>
 
-
-<script>
-<button onclick="myButtonOne()">Richard Bell</button>; 
-<button onclick="myButtonTwo()">Kailum Ahmed</button>; 
-<button onclick="myButtonThree()">Maddy Kidd</button>; 
-
-function myButtonOne(){
-    let button = document.createElement("Button")
-   button.innerHTML = "Richard Bell is a independent dog owner";
-   buttonBag.appendChild(button);
-}
-
-function myButtonTwo(){
-    let button = document.createElement("Button")
-   button.innerHTML = "Kailum Ahmed is an engineer who lives alone";
-   buttonBag.appendChild(button);
-}
-function myButtonThree(){
-    let button = document.createElement("Button")
-   button.innerHTML = "Maddy Kidd is a survivor of the wasteland";
-   buttonBag.appendChild(button);
-}
-</script>
 </body>
 </html>
