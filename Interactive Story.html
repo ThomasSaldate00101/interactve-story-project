@@ -77,7 +77,7 @@ function showStory(){
     buttonBag.innerHTML = "";
 
     for(let richard of storyHistory){
-        createStory(story[richard].text);
+        createStory(thestory[richard].text);
     }
     for(let choice of story[currentChoice].choices){
         createButton(choice[0], choice[1])
@@ -91,7 +91,7 @@ function showTheStory(){
     buttonBag.innerHTML = "";
 
     for(let kailum of storyHistory){
-        createStory(story[kailum].text);
+        createStory(thestory[kailum].text);
     }
     for(let choice of story[currentChoice].choices){
         createButton(choice[0], choice[1])
@@ -105,7 +105,7 @@ function showTheStory(){
     buttonBag.innerHTML = "";
 
     for(let maddy of storyHistory){
-        createStory(story[maddy].text);
+        createStory(thestory[maddy].text);
     }
     for(let choice of story[currentChoice].choices){
         createButton(choice[0], choice[1])
