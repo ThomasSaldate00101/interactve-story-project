@@ -34,9 +34,9 @@ const story = {
     intro : {
         text : "Choose your character",
         choices :[ 
-             ["You chose richard 1", "richard1"],
-             ["You chose kailum 1", "kailum1"],
-             ["You chose maddy 1", "maddy1"]
+             ["Richards route", "route1"],
+             ["Kailums route", "route2"],
+             ["Maddy's route", "maddy3"]
         ]
    },
 
@@ -55,30 +55,30 @@ const story = {
     }
 }
 
-function createButton(text, richard){
+function createButton(buttonText, richard){
     let button = document.createElement("Button");
-    button.innerHTML = text;
+    button.innerHTML = buttonText;
     buttonBag.appendChild(Button);
     button.addEventListener("click", function(){
-        storyHistory.push(choice);
+        storyHistory.push(choices);
+        showStory();
+    })
+}
+function createButton(buttonText, kailum){
+    let button = document.createElement("Button");
+    button.innerHTML = buttonText;
+    buttonBag.appendChild(button);
+    button.addEventListener("click", function(){
+        storyHistory.push(choices);
         showStory();
     });
 }
-function createButton(text, kailum){
+function createButton(buttonText, maddy){
     let button = document.createElement("Button");
-    button.innerHTML = text;
+    button.innerHTML = buttonText;
     buttonBag.appendChild(button);
     button.addEventListener("click", function(){
-        storyHistory.push(choice);
-        showStory();
-    });
-}
-function createButton(text, maddy){
-    let button = document.createElement("Button");
-    button.innerHTML = text;
-    buttonBag.appendChild(button);
-    button.addEventListener("click", function(){
-        storyHistory.push(choice);
+        storyHistory.push(choices);
         showStory();
     });
 }
