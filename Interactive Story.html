@@ -16,7 +16,7 @@
 </div>
 <p>Let our Special Journey begin...</p>
 
-<div id="story">
+<div id="theStory">
 
 </div>
 
@@ -24,7 +24,7 @@
 
 </div>
 <script>
-let storyFolder = document.getElementById("story");
+let storyFolder = document.getElementById("theStory");
 
 let buttonBag = document.getElementById("Button");
 
@@ -34,20 +34,20 @@ const theStory = {
     intro : {
         text : "Choose your character",
         choices :[ 
-             ["Richard/Bell", "character"],
-             ["Kailum/Ahmed", ""],
-             ["Maddy/Kidd", ""]
+             ["You chose richard 1", "richard1"],
+             ["You chose kailum 1", "kailum1"],
+             ["You chose maddy 1", "maddy1"]
         ]
    },
 
-    character1 : {
+    richard1 : {
         text : "On a bright Saturday evening in the 1980’s, you are walking your dog named danny, your childhood dog that has been at your side through thick and thin, who would risk his life if it meant . On your way back from your joyous adventure, sirens ring like that one annoying kid in 8th grade. “Nuclear attack imminent please seek shelter immediately!” in a panic about what to do, you.",
         choices : [
             ["run to the bunker", "R2"],
             ["make your way home", "just like that one movie..."]
     ]
 },
-    character1 : {
+    richard1 : {
         text: "",
         choices :[
 
@@ -82,9 +82,9 @@ function showStory(){
         createButton(choice[0], choice[1])
     }
 }
-showStory();
+showTheStory();
 
-function showStory(){
+function showTheStory(){
     let currentPage = storyHistory[storyHistory.length - 1];
     storyFolder.innerHTML = "";
     buttonBag.innerHTML = "";
@@ -96,9 +96,9 @@ function showStory(){
         createButton(choice[0], choice[1])
     }
 }
-showStory();
+showTheStory();
 
-function showStory(){
+function showTheStory(){
     let currentPage = storyHistory[storyHistory.length - 1];
     storyFolder.innerHTML = "";
     buttonBag.innerHTML = "";
@@ -110,7 +110,7 @@ function showStory(){
         createButton(choice[0], choice[1])
     }
 }
-showStory();
+showTheStory();
 </script>
 
 
