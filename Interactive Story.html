@@ -8,31 +8,28 @@
 </head>
 <body>
 <p>Welcome to our choose our adventure game!</p>
-
+ 
 <div id="intro"> 
 <h1>Adventures of the Wasteland</h1>
-
+ 
 <p>It is a lovely afternoon, everyones getting off of work, kids are going back into the houses after playing. People are ready to relax after hard work, when suddenly an alarm sounds. Everyone is in panic, running out of their house, leaving everthing behind</p>
 </div>
 <p>Let our Special Journey begin...</p>
-
+ 
 <div id="story">
-
+ 
 </div>
-
+ 
 <div id="Button">
-
+ 
 </div>
-<p>
-
-</p>
 <script>
 let storyFolder = document.getElementById("story");
-
+ 
 let buttonBag = document.getElementById("Button");
-
+ 
 let storyHistory = ["intro"]; 
-
+ 
 const story = {
     intro : {
         text : "Choose your character",
@@ -42,7 +39,7 @@ const story = {
              ["You chose maddy 1", "maddy1"]
         ]
    },
-
+ 
     richard1 : {
         text : "On a bright Saturday evening in the 1980’s, you are walking your dog named danny, your childhood dog that has been at your side through thick and thin, who would risk his life if it meant . On your way back from your joyous adventure, sirens ring like that one annoying kid in 8th grade. “Nuclear attack imminent please seek shelter immediately!” in a panic about what to do, you.",
         choices : [
@@ -51,18 +48,17 @@ const story = {
     ]
 },
     richard2 : {
-        text: " you ditch danny and in a full blown sprint and make your way to the bunker. That you had signed up for a couple of months ago You and a large amount of people make your way to the bunker, barley too as the bunker doors were about to close. As you and many others wait in line, you spot a closet with uniforms that You could possibly use to sneak through the line. You decide to...",
+        text: "",
         choices :[
-            ["wait in line like a good boi", "richard4"]
-            ["disquise yourself", "richard5"]
+ 
         ]
     }
 }
-
+ 
 function createButton(text, richard){
     let button = document.createElement("Button");
     button.innerHTML = text;
-    buttonBag.appendChild(button);
+    buttonBag.appendChild(Button);
     button.addEventListener("click", function(){
         storyHistory.push(choice);
         showStory();
@@ -86,7 +82,7 @@ function createButton(text, maddy){
         showStory();
     });
 }
-
+ 
 function createStory(text){
     let storyItem = document.createElement ("p");
     storyItem.innerText = text;
@@ -97,37 +93,37 @@ function showStory(){
     let currentRichard = storyHistory[storyHistory.length - 1];
     storyFolder.innerHTML = "";
     buttonBag.innerHTML = "";
-
+ 
     for(let richard of storyHistory){
-        createStory(thestory[richard].text);
+        createStory(story[richard].text);
     }
     for(let choice of story[currentRichard].choices){
         createButton(choice[0], choice[1])
     }
 }
 showStory();
-
+ 
 function showStory(){
     let currentKailum = storyHistory[storyHistory.length - 1];
     storyFolder.innerHTML = "";
     buttonBag.innerHTML = "";
-
+ 
     for(let kailum of storyHistory){
-        createStory(thestory[kailum].text);
+        createStory(story[kailum].text);
     }
     for(let choice of story[currentKailum].choices){
         createButton(choice[0], choice[1])
     }
 }
 showStory();
-
+ 
 function showStory(){
     let currentMaddy = storyHistory[storyHistory.length - 1];
     storyFolder.innerHTML = "";
     buttonBag.innerHTML = "";
-
+ 
     for(let maddy of storyHistory){
-        createStory(thestory[maddy].text);
+        createStory(story[maddy].text);
     }
     for(let choice of story[currentMaddy].choices){
         createButton(choice[0], choice[1])
@@ -135,7 +131,7 @@ function showStory(){
 }
 showStory();
 </script>
-
-
+ 
+ 
 </body>
 </html>
