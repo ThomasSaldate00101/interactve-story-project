@@ -23,6 +23,9 @@
 <div id="Button">
 
 </div>
+<p>
+
+</p>
 <script>
 let storyFolder = document.getElementById("theStory");
 
@@ -55,15 +58,7 @@ const theStory = {
         ]
     }
 }
-function createButton(buttonText, choice){
-    let button = document.createElement("Button");
-    button.innerHTML = buttonText;
-    buttonBag.appendChild(Button);
-    button.addEventListener("click", function(){
-        storyHistory.push(choice);
-        showStory();
-    });
-}
+
 
 function createStory(text){
     let storyItem = document.createElement ("p");
