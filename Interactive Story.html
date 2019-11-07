@@ -34,13 +34,13 @@ const story = {
     intro : {
         text : "Choose your character",
         choices :[ 
-             ["Richards route", "route1"],
+             ["Richards route", "richard1"],
              ["Kailums route", "kailum1"],
              ["Maddy's route", "maddy3"]
         ]
    },
  
-    route1 : {
+    richard1 : {
         text : "On a bright Saturday evening in the 1980’s, you are walking your dog named danny, your childhood dog that has been at your side through thick and thin, who would risk his life if it meant . On your way back from your joyous adventure, sirens ring like that one annoying kid in 8th grade. “Nuclear attack imminent please seek shelter immediately!” in a panic about what to do, you...",
         choices : [
             ["run to the bunker", "richard2"],
@@ -50,8 +50,27 @@ const story = {
 
     richard3 : {
         text: "You lift your pupper and sprint your way home to hide in the attic. To bad your house dosent have a basement, as that would probably be more effective to survival. you have now succeeded in dying to an atom bomb. big sad",
-    }
+    
 },
+    richard2 : {
+        text: " you ditch danny and in a full blown sprint and make your way to the bunker That you had signed up for a couple of months ago You and a large amount of people make your way to the bunker, barley too as the bunker doors were about to close. As you and many others wait in line, you spot a closet with uniforms that You could possibly use to sneak through the line. You decide too...",
+        choices : [
+            ["wait in line","richard4"]
+            ["disquise","richard5"]
+        ]
+},
+    richard4 : {
+    text : "You decide it would be an unwise choice and wait in line. They give you a uniform to wear. It's a red and silver jumpsuit of a very bizarre design. You put on the uniform and then proceed to a cold room with many cocoon shaped pods built with intent to hold a person.  A person in your group ask “What are these things?” “These pods are to eliminate any harmful bacteria,” the doctor states, “then we will show you all to your new homes. It's just a safety procedure we hope you understand.”As you and the other people enter these strange devices the hatch closes and then you feel the small pod began freeze you into a deep sleep. When you awaken from your frozen slumber the pod opens up and you fall to the floor shaky from being asleep for who knows how long, as you look around you notice that your pod was the only one that opened. Still shaky, you try to open other pods, but to no avail as none were seeming to open. “They malfunctioned,” said a voice from the entrance of the room, “it seems we were the only lucky ones to survive these pods.",
+        choices : [
+        ["drop kick the stranger", "richard5"]
+        ["meet your new friend","richard6"]
+    ]
+    },
+    rishard5 : {
+        text : "out of pure unkown instinct, you thow your have frozen body at the stranger",
+
+    },
+}
 function createButton(buttonText, richard){
     let button = document.createElement("Button");
     button.innerHTML = buttonText;
